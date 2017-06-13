@@ -1,0 +1,202 @@
+.site-header
+	width: 100%
+	padding-bottom: 20px
+.header-wrap
+	max-width: 1000px
+	margin: 0px auto
+.header-cover
+	height: 100px
+.site-logo 
+	float: left
+	height: 100px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	a
+		font-family: 'Poiret One', cursive
+		font-weight: 400
+		font-size: 38pt
+		color: black
+
+/* Header Search Form */
+.header-search
+	float: right
+	height: 100px
+	display: flex
+	flex-direction: column
+	justify-content: center
+.search-form
+	height: 40px
+	width: 300px
+	display: flex
+
+	button
+		height: 40px
+		width: 40px
+		border: 1px solid $gold
+		background-color: $gold
+		color: white
+		&:focus
+			outline: none
+	.search-field
+		height: 40px
+		width: 260px
+		border: 1px solid $gold
+		padding: 5px
+		&:focus
+			outline: none
+/* Site Navigation */
+.site-navigation 
+	float: right
+
+	ul li 
+		display: inline-block
+		margin-left: 20px 
+		&:hover > .sub-menu li
+			visibility: visible
+		&:hover a
+			color: black
+	.sub-menu
+		position: absolute
+		z-index: 4
+		padding: 0
+		li 
+			visibility: hidden
+			display: block
+			margin: 0
+			padding: 5px
+			text-decoration: none
+			background-color: white
+			z-index: 4
+			min-width: 150px
+			
+	ul li a 
+		font-family: 'Roboto', sans-serif
+		text-transform: uppercase
+		font-weight: 500
+		color: rgba(0,0,0,0.7)
+		font-size: 21pt
+	.current-menu-item  a
+		color: black
+
+
+
+/* =========================================================================== */
+
+@media(max-width: 1000px) and (min-width: 775px)
+	.header-wrap
+		padding-left: 10px 
+		padding-right: 10px
+@media(max-width: 775px)
+	.site-header
+		height: 80px
+		padding-bottom: 0
+	.site-logo
+		float: right
+		margin-right: 20px
+		margin-top: 15px
+	.site-logo
+		text-align: center
+		height: 50px
+		
+		a
+			font-size: 28pt
+			color: $gold
+			 
+			
+	.search-form
+		margin: auto
+	.header-search
+		height: 60px
+		float: none
+
+	.mobile-header
+		position: absolute
+		z-index: 999
+		min-height: calc(100vh - 80px)
+		width: calc(100vw - 20px)
+		transition: 0.5s
+		transform: translateX(-100vw)
+		width: 100%
+		background-color: rgba(256, 256, 256, 0.9)
+		&.is-open
+			transform: translateX(0)
+	.mobile-navigation
+		text-align: center
+		display: flex
+		flex-direction: column
+		justify-content: center
+		ul
+			padding: 0
+			margin: 0
+			li
+				margin: 0
+				padding-left: 0
+				padding-bottom: 15px 
+				list-style-type: none
+				a 
+					color: black
+					text-transform: uppercase
+					font-size: 21pt
+					font-weight: 400
+			&:hover > .sub-menu 
+				display: none
+			&:hover a
+				color: black
+			.sub-menu
+				display: none
+				padding: 0
+				li 
+					display: block
+					margin: 0
+					padding: 5px
+					text-decoration: none
+					background-color: white
+					z-index: 4
+					min-width: 150px
+
+
+	.mobile-nav-toggle
+		display: flex
+		position: relative
+		float: left
+		margin-left: 20px
+		margin-top: 15px
+		height: 50px
+		width: 50px
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+		span,
+		span::before,
+		span::after
+			transition: 0.1s
+			display: block
+			position: absolute
+			content: ""
+			background-color: $gold
+			height: 2px
+			width: 100%
+		span::before
+			top: -17px
+		span::after
+			top: 17px
+		&.is-open span
+			background-color: transparent
+		&.is-open span::before
+			top: 0px
+			transform: rotate(45deg)
+			transition: 0.5s
+		&.is-open span::after
+			transform-origin: center
+			top: 0px
+			transform: rotate(-45deg)
+			transition: 0.5s
+			
+
+
+
+
+
+

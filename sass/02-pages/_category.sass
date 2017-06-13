@@ -1,0 +1,48 @@
+.categories
+	max-width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	flex-wrap: wrap
+.cat-filter
+	max-width: 200px
+	padding-top: 40px
+
+	li 
+		list-style-type: none
+		padding: 0
+		margin: 0px 0px
+		display: block
+		ul 
+			padding-left: 0
+		a 
+			color: rgba(0,0,0,0.87)
+			text-transform: uppercase
+			
+		&.current-cat
+			color: $gold
+			a
+				color: $gold
+.cat-posts-wrap
+	max-width: 790px
+.cat-posts
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+	
+.paginate
+	margin-top: 80px
+	a
+		color: rgba(0,0,0,0.87)
+		margin-left: 10px
+	.current
+		color: rgba(0,0,0,0.4)
+
+
+
+
+
+@media(max-width: 1000px)
+	.categories
+		padding-left: 10px 
+		padding-right: 10px
